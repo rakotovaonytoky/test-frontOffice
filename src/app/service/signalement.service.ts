@@ -40,7 +40,7 @@ export class SignalementService {
   // }
 
   listeSignalement(token: string) {
-    let host = environment.host;
+    let host = "http://backoffice-signalement.herokuapp.com/api";
     return this.httpclient.get(host+"/signalements?token=" + token);
   }
 
