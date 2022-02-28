@@ -1,0 +1,22 @@
+<div class="wrap">
+    <form class="login-form" (ngSubmit)="userLogin()">
+        <div class="form-header">
+            <h3>Login Form</h3>
+            <p>Login to access your dashboard</p>
+        </div>
+        <!--Email Input-->
+        <div class="form-group">
+            <input type="text" class="form-input" placeholder="email@example.com" [(ngModel)]="user.email" id="email" name="email">
+        </div>
+        <!--Password Input-->
+        <div class="form-group">
+            <input type="password" class="form-input" [(ngModel)]="user.mdp" placeholder="password" id="mdp" name="mdp">
+        </div>
+        
+        <!--Login Button-->
+        <div class="form-group">
+            <button class="form-button" type="submit">Login</button>
+        </div>
+       
+    </form>
+</div>

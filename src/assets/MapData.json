@@ -1,0 +1,25 @@
+ [
+{"nom": "Diana",                "lng": 49.314194,"lat" :-12.308138},
+{"nom":"Sava:",                 "lng":50.155871, "lat" :-14.255368},
+{"nom":"Sofia",                 "lng" :47.993431,"lat" :-14.888553},
+{"nom":"Boeny",                 "lng":14.888553, "lat" :-15.670974},
+{"nom":"Analanjirofo",          "lng":49.688544, "lat" :-16.218734},
+{"nom":"Alaotra-Mangoro",       "lng" :48.330231,"lat" :-17.843486},
+{"nom":"Betsiboka",             "lng":46.828279, "lat" :-16.951108},
+{"nom":"Melaky",                "lng":44.925413, "lat" :-17.819342},
+{"nom":"Bongolava",             "lng":46.053829, "lat" :-18.764370},
+{"nom":"Analamanga",            "lng":47.521620, "lat" :-18.912173},
+{"nom":"Itasy",                 "lng":47.180614, "lat" :-19.010921},
+{"nom":"Vakinakaratra",         "lng":47.034702, "lat" :-19.875952},
+{"nom":"Amoron Mania",          "lng":47.244794, "lat" :-20.533279},
+{"nom":"Menabe",                "lng":44.317131, "lat" :-20.294562},
+{"nom":"MatsiatraAmbony",       "lng":47.112808, "lat" :-21.455944},
+{"nom":"Atsinanana",            "lng":49.391441, "lat" :-18.115998},
+{"nom":"Vatovavy Fitovinany",   "lng":47.634230, "lat" :-21.302529},
+{"nom":"Ihorombe",              "lng":46.130733, "lat" :-22.404442},
+{"nom":"Atsimo-Atsinana",       "lng":47.015841, "lat" :-23.588973},
+{"nom":"Anosy",                 "lng":46.076231, "lat" :-24.071583},
+{"nom":"Atsimo-Andrefana",      "lng":43.735886, "lat" :-23.392997},
+{"nom":"Androy",                "lng":45.660381, "lat" :-24.817355}
+
+]

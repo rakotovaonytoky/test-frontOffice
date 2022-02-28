@@ -1,0 +1,115 @@
+<script src="accordion.js">
+</script>
+<header>
+    <label class="logo">Front-Office</label>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#" class="active">Home</a></li>
+        <li><button mat-raised-button color="primary" class="active-logout" (click)="ViewAll()">Tous</button></li>
+    </ul>
+    
+</header>
+<div id="main">
+    <article>
+      
+    
+        <div id="map"></div>
+       
+    </article>
+  
+    <aside>
+            <form class="example-form">
+                <div style="width: 100%;">
+                    <h4>Trier les signalements</h4>
+                <mat-form-field appearance="fill">
+                    <mat-label>Listes signalements</mat-label>
+                    <mat-select  (selectionChange)="onSelectSignalement($event.value)">
+                        <mat-option *ngFor="let TypesSignalement of TypesSignalements"  [value]="TypesSignalement">
+                            {{TypesSignalement}}
+                        </mat-option>
+                        
+                    </mat-select>
+                </mat-form-field>
+                    <button mat-raised-button color="primary" style="margin-left: 10%;" (click)="ViewAll()">Tous</button>
+                </div>
+            
+            </form>
+            <p>Trier par : {{selected }}</p>
+            <p *ngFor="let signalement of signalements">
+             
+            </p>
+          <!-- table -->
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th colspan="2"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        <tr *ngFor="let signalement of signalements;let i = index">
+            <td><span class="bolded">{{ i+1 }}</span></td>
+            <td>{{signalement['idtypesignalement']['nom']}}</td>
+            <td>{{signalement['datesignalement']}}</td>
+            <td><span>{{signalement['idstatus']['nom']}}</span></td>
+            <td><button mat-raised-button (click)="viewSignalement(signalement)">Voir</button></td>
+        </tr>
+
+
+
+
+
+        <!-- and so on... -->
+    </tbody>
+
+</table>
+
+
+
+          <!-- /table -->
+    </aside>
+    <mat-drawer-container autosize class="drawer-sidenav">
+   <mat-drawer #drawer mode="side" class="example-slidenav">
+        <nav>
+            <h3>Details signalement:</h3>
+            <ng-template [ngIf]="signalement$">
+                <div class="OneSignalement">
+                    <div><span class="bolded">Signalé le :</span>{{signalement$['datesignalement']}}</div>
+                    <div><span class="bolded">Par: </span>{{signalement$['idmobileuser']['nom'] }}
+                        <span>.</span>{{signalement$['idmobileuser']['prenom'] }}</div>
+                    <div><span class="bolded">Type :</span>{{signalement$['idtypesignalement']['nom']}}</div>
+                    <div><span class="bolded">Description :</span>
+                        <p>{{signalement$['description']}}</p>
+                    </div>
+                    <div>
+                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+                            [(ngModel)]="statSelected">
+        
+                            <mat-radio-button class="example-radio-button" *ngFor="let stat of status" [value]="stat">
+                                {{stat}}
+                            </mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+            </ng-template>
+            <!-- <h4>Liste des regions</h4>
+            <mat-form-field appearance="fill">
+                <mat-label>Listes signalements</mat-label>
+                <mat-select    (selectionChange)="onSelectRegion($event)">
+                    <mat-option *ngFor="let region of regions"  [value]="region" >
+                        {{region['nomregion']}}
+                    </mat-option>
+                  
+                </mat-select>
+            </mat-form-field> -->
+        </nav>
+   </mat-drawer>
+</mat-drawer-container>
+</div>
+<footer>Footer</footer>
+
